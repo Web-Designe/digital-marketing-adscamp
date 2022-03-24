@@ -43,27 +43,35 @@
             <div class="phone-option"><i class="fa fa-phone" style="font-size:15px;color:red"></i>+91 987654321</div>
             <div class="email-option"><i class="fa fa-envelope" style="font-size:15px;color:red"></i>adscamponline@gmail.com</div>
         </div>
-         <div class="nav-background">
-             <nav class="navbar navbar-expand-lg navbar-light">
-                 <div class="container-fluid">
-                     <a class="navbar-brand" href="#"><img class="img-fluid" src="assets/img/logo.png" alt="" width="40px" height="auto"></a>
-                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                     <span class="navbar-toggler-icon"></span>
-                 </button>
-                     <div class="collapse navbar-collapse nav-end" id="navbarNavAltMarkup">
-                         <div class="navbar-nav" >
-                             <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                              <!-- <a class="nav-link" href="price.html">Pricing & Plan</a> -->
-                              <a class="nav-link" href="service.html">Service</a>
-                              <!-- <a class="nav-link" href="#">Blog</a> -->
-                              <a class="nav-link" href="about.html">About Us</a>
-                              <a class="nav-link" href="contact.html">Contact Us</a>
-                             <!-- <a class="nav-link disabled">Disabled</a> -->
-                         </div>
-                     </div>
-                 </div>
-             </nav>
-         </div>
+         
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="assets/img/logo.png" alt="">
+               </div>
+             
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="service.html" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact Us</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
     </div>
     
         <!-- navigation section end  -->
@@ -120,7 +128,7 @@
 
         <div class="serviceCon">
             <div class="service-inner conMargin right" data-aos="fade-right" id="itemAling">
-                <img src="assets/img/seo.jpg" alt="">
+                <img src="/assets/img/seo.jpg" alt="">
             </div>
             <div class="serviceCont" data-aos="fade-up">
                 <h3>Search Engine Optimization</h3>
@@ -138,7 +146,7 @@
                     maxime, illum nobis repellendus unde magni deleniti reiciendis nam amet.</p>
             </div>
             <div class="service-inner left" data-aos="fade-left" id="itemAling">
-              <img src="assets/img/uiux.jpg" alt="">
+              <img src="/assets/img/uiux.jpg" alt="">
             </div>
         </div>
 
@@ -308,7 +316,31 @@
             </div>
         </footer>
 
+<script>
+            
+       
+            const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+const search = document.querySelector(".search");
 
+hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+    search.classList.toggle("active");
+}
+const navLink = document.querySelectorAll(".nav-link");
+
+navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+function closeMenu() {
+    search.classList.toggle("active");
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+}
+
+</script>
 </body>
 
 </html>

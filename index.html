@@ -48,28 +48,34 @@
 
 
 
-
-     <div class="nav-background">
-         <nav class="navbar navbar-expand-lg navbar-light">
-             <div class="container-fluid">
-                 <a class="navbar-brand" href="#"><img class="img-fluid" src="assets/img/logo.png" alt="" width="40px" height="auto"></a>
-                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                 <span class="navbar-toggler-icon"></span>
-             </button>
-                 <div class="collapse navbar-collapse nav-end" id="navbarNavAltMarkup">
-                     <div class="navbar-nav" >
-                         <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                          <!-- <a class="nav-link" href="price.html">Pricing & Plan</a> -->
-                          <a class="nav-link" href="service.html">Service</a>
-                          <!-- <a class="nav-link" href="#">Blog</a> -->
-                          <a class="nav-link" href="about.html">About Us</a>
-                          <a class="nav-link" href="contact.html">Contact Us</a>
-                         <!-- <a class="nav-link disabled">Disabled</a> -->
-                     </div>
-                 </div>
-             </div>
-         </nav>
-     </div>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="assets/img/logo.png" alt="">
+               </div>
+             
+            
+               <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="service.html" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact Us</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
 </div>
 
     <!-- navigation section end  -->
@@ -1208,6 +1214,38 @@
                 interval: false
             });
         });
+
+
+
+        // -------------------navbar script---------------
+        
+       
+    const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+const search = document.querySelector(".search");
+
+hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+    search.classList.toggle("active");
+}
+const navLink = document.querySelectorAll(".nav-link");
+
+navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+function closeMenu() {
+    search.classList.toggle("active");
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+}
+
+
+
+
+        // -------------------navbar script end---------------
+
     </script>
     <script src="js/cost.js"></script>
     <script src="js/date-time.js"></script>
