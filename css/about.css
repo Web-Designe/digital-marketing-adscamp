@@ -36,10 +36,11 @@
 .about-p{
     color: black;
 }
-.btn{
+.btnbtn{
     display: inline-block;
     background: orangered;
     color: #fff;
+    font-weight: bold;
     padding: 8px 30px;
     margin: 30px 0;
     border-radius: 30px;

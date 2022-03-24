@@ -17,23 +17,55 @@ body {
   background-color: #e7f4fa;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
+    font-weight: bold;
+  
+}
+.fa:hover{
+    background-color: #6486cf;
+    color: #ffffff;
+}
+.fa-instagram:hover{
+    background-color: #6486cf;
+    color: #ffffff;
+}
+.social{
+
+    margin-left: 25px;
+    padding-left: 25px;
+    margin-right: 105px;
+    padding-right: 25px;
 }
 .phone-option{
-    border: 2px solid orangered;
     font-weight: bold;
-    cursor: pointer;
+    /* border: 2px solid orangered; */
+    /* background-color: rgb(7, 1, 41); */
     margin: 5px;
     padding: 5px;
+    cursor: pointer;
 }
 .email-option{
-    border: 2px solid orangered;
-    font-weight: bold;
     cursor: pointer;
+    /* background-color: orangered; */
+    /* border: 2px solid orangered; */
     margin: 5px;
     padding: 5px;
 }
-
+.btnbtn{
+    display: inline-block;
+    background: orangered;
+    color: #fff;
+    font-weight: bold;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background 0.5s;
+}
+.btnbtn:hover{
+    background: #563434;
+    color: #fff;
+}
 
 .nav-link{
     font-weight: bold;
@@ -1265,4 +1297,32 @@ h3 {
 .tel {
     text-decoration: none;
     color: rgb(255, 255, 255);
+}
+
+
+
+/* ----------------------- resposivnesss-------------------- */
+@media(min-width:200px) and (max-width:779px) {
+
+ .head-row{
+     flex-direction: column;
+ }
+ .head-col{
+     width: 100%;
+ }
+ .head-col img{
+     display: none;
+     /* margin-top: -230%;
+     z-index: -100;
+     width: 100%; */
+ }
+ .container{
+     margin-top: -200%;
+ }
+ .task{
+     flex-direction: column;
+ }
+ .item{
+     width: 90%;
+ }
 }
