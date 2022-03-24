@@ -30,10 +30,10 @@ body {
     color: #ffffff;
 }
 .social{
- float: left;
-    margin-left: 25px;
-    padding-left: 555px;
-    margin-right: 185px;
+    float: left;
+    margin-left: -460px;
+    padding-left: 525px;
+    margin-right: 756px;
     padding-right: 25px;
 }
 .phone-option{
@@ -329,13 +329,17 @@ h1 {
 }
 
 .task {
-    width: 50%;
+    width: 90%;
     height: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
+    justify-content: center;
     overflow: hidden;
     margin-left: 70px;
+}
+.font-size-h2{
+    text-align: center;
+    font-weight: bold;
 }
 
 @media(min-width:200px) and (max-width:780px) {
